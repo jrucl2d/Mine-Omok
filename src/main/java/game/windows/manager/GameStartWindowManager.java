@@ -1,7 +1,9 @@
 package game.windows.manager;
 
+import game.common.Images;
+import game.windows.components.*;
 import game.windows.components.Button;
-import game.windows.components.ButtonBuilder;
+import game.windows.components.Label;
 import game.windows.components.Window;
 
 import java.awt.*;
@@ -53,12 +55,33 @@ class GameStartWindowManager {
                 .background(Color.white)
                 .build();
 
+        final Label omokImageLabel = LabelBuilder.builder()
+                .x(160)
+                .y(50)
+                .width(280)
+                .height(280)
+                .image(Images.OMOK_BG)
+                .visible(false)
+                .build();
+
+        final Label mineImageLabel = LabelBuilder.builder()
+                .x(160)
+                .y(50)
+                .width(280)
+                .height(280)
+                .image(Images.MINE_BG)
+                .visible(false)
+                .build();
+
         return new Window(Color.gray)
                 .put(omokGameStartButton)
                 .put(omokScoreButton)
                 .put(mineGameStartButton)
                 .put(mineScoreButton)
                 .put(omokScoreButton)
-                .put(exitButton);
+                .put(exitButton)
+                .put(omokImageLabel)
+                .put(mineImageLabel)
+                ;
     }
 }

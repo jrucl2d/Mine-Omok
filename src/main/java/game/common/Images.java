@@ -39,7 +39,7 @@ public enum Images {
     NUMBER_8("숫자 8", "8"),
     ;
     private static final String DEFAULT_BASE_PATH = "src/main/resources/";
-    private static final String DEFAULT_IMAGE_FILE_EXT = "jpg";
+    private static final String DEFAULT_IMAGE_FILE_EXT = ".jpg";
 
     private final String desc;
     private final String imageName;

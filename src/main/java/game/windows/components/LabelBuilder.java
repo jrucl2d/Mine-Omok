@@ -12,6 +12,10 @@ public class LabelBuilder {
     private Images image;
     private boolean visible;
 
+    public static LabelBuilder builder() {
+        return new LabelBuilder();
+    }
+
     public LabelBuilder x(final int x) {
         this.x = x;
         return this;
