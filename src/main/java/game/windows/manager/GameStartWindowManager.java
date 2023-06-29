@@ -12,10 +12,11 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-class GameStartWindowManager {
+class GameStartWindowManager implements WindowBuilder {
     private final static Logger logger = LoggerFactory.getLogger(GameStartWindowManager.class);
 
-    static Window buildGameStartWindow() {
+    @Override
+    public Window build() {
         // 오목 게임
         final Button omokGameStartButton = ButtonBuilder.builder()
                 .title("오목 게임")
@@ -56,6 +57,12 @@ class GameStartWindowManager {
                     public void mouseExited(MouseEvent e) {
                         logger.info("오목 게임 버튼에 마우스 out");
                         omokImageLabel.hide();
+                    }
+
+                    @Override
+                    public void mouseClicked(MouseEvent e) {
+                        logger.info("오목 게임 버튼 클릭");
+                        logger.info("오목 게임을 시작합니다...");
                     }
                 }
         );

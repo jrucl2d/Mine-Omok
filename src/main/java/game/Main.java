@@ -21,6 +21,7 @@ public class Main {
                 .width(400)
                 .height(400)
                 .addWindow(WindowType.GAME_START, WindowManager.buildWindow(WindowType.GAME_START))
+                .addWindow(WindowType.OMOK_GAME, WindowManager.buildWindow(WindowType.OMOK_GAME))
                 .build()
                 .startWith(WindowType.GAME_START);
     }
