@@ -9,6 +9,14 @@ public class Label extends Component {
         this.content = label;
     }
 
+    public void show() {
+        this.content.setVisible(true);
+    }
+
+    public void hide() {
+        this.content.setVisible(false);
+    }
+
     @Override
     java.awt.Component getComponent() {
         return this.content;

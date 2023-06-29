@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
 import javax.swing.*;
 
 public class Main {
-    final static Logger logger = LoggerFactory.getLogger(Main.class);
+    private final static Logger logger = LoggerFactory.getLogger(Main.class);
 
     public static void main(String[] args) {
         logger.info("오목과 지뢰찾기 게임을 시작합니다.");
