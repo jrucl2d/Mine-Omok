@@ -5,7 +5,7 @@ import javax.swing.*;
 public class Button extends Component {
     private final JButton button;
 
-    Button(JButton button) {
+    Button(final JButton button) {
         this.button = button;
     }
 

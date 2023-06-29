@@ -12,13 +12,14 @@ public class Window extends Component {
         this.p.setBackground(background);
     }
 
-    public void put(final Component component) {
+    public Window put(final Component component) {
         switch (component.getType()) {
             case FRAME -> this.p.add((JFrame) component.getComponent());
             case WINDOW -> this.p.add((JPanel) component.getComponent());
             case LABEL -> this.p.add((JLabel) component.getComponent());
             case BUTTON -> this.p.add((JButton) component.getComponent());
         }
+        return this;
     }
 
     @Override

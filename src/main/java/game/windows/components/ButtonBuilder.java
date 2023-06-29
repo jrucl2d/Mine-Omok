@@ -11,6 +11,10 @@ public class ButtonBuilder {
     private int height;
     private Color background;
 
+    public static ButtonBuilder builder() {
+        return new ButtonBuilder();
+    }
+
     public ButtonBuilder title(final String text) {
         this.text = text;
         return this;

@@ -5,7 +5,7 @@ import javax.swing.*;
 public class Label extends Component {
     private final JLabel label;
 
-    Label(JLabel label) {
+    Label(final JLabel label) {
         this.label = label;
     }
 
