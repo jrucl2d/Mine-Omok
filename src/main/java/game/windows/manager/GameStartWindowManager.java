@@ -5,6 +5,7 @@ import game.windows.components.Button;
 import game.windows.components.Label;
 import game.windows.components.Window;
 import game.windows.components.*;
+import game.windows.event.WindowEventSource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -63,6 +64,7 @@ class GameStartWindowManager implements WindowBuilder {
                     public void mouseClicked(MouseEvent e) {
                         logger.info("오목 게임 버튼 클릭");
                         logger.info("오목 게임을 시작합니다...");
+                        WindowEventSource.windowChangedTo(WindowType.OMOK_GAME);
                     }
                 }
         );
