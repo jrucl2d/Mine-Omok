@@ -3,19 +3,14 @@ package game.windows.components;
 import javax.swing.*;
 
 public class Label extends Component {
-    private final JLabel label;
+    private final JLabel content;
 
     Label(final JLabel label) {
-        this.label = label;
+        this.content = label;
     }
 
     @Override
-    ComponentType getType() {
-        return ComponentType.LABEL;
-    }
-
-    @Override
-    Object getComponent() {
-        return this.label;
+    java.awt.Component getComponent() {
+        return this.content;
     }
 }

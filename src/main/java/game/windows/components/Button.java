@@ -3,19 +3,14 @@ package game.windows.components;
 import javax.swing.*;
 
 public class Button extends Component {
-    private final JButton button;
+    private final JButton content;
 
     Button(final JButton button) {
-        this.button = button;
+        this.content = button;
     }
 
     @Override
-    ComponentType getType() {
-        return ComponentType.BUTTON;
-    }
-
-    @Override
-    Object getComponent() {
-        return this.button;
+    java.awt.Component getComponent() {
+        return this.content;
     }
 }
