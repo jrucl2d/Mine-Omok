@@ -64,7 +64,7 @@ class GameStartWindowManager implements WindowBuilder {
                     public void mouseClicked(MouseEvent e) {
                         logger.info("오목 게임 버튼 클릭");
                         logger.info("오목 게임을 시작합니다...");
-                        WindowEventSource.windowChangedTo(WindowType.OMOK_GAME);
+                        WindowEventSource.windowChangedTo(WindowType.OMOK_INFO_INPUT);
                     }
                 }
         );

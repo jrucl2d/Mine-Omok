@@ -9,7 +9,8 @@ public class ButtonBuilder {
     private int y;
     private int width;
     private int height;
-    private Color background;
+    private Color background = Color.white;
+    private boolean visible = true;
 
     public static ButtonBuilder builder() {
         return new ButtonBuilder();
@@ -45,10 +46,16 @@ public class ButtonBuilder {
         return this;
     }
 
+    public ButtonBuilder visible(final boolean visible) {
+        this.visible = visible;
+        return this;
+    }
+
     public Button build() {
         final JButton button = new JButton(text);
         button.setBounds(x, y, width, height);
         button.setBackground(background);
+        button.setVisible(visible);
         return new Button(button);
     }
 }
