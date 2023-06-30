@@ -3,6 +3,7 @@ package game;
 
 import game.windows.components.Frame;
 import game.windows.components.FrameBuilder;
+import game.windows.components.Window;
 import game.windows.components.WindowType;
 import game.windows.event.WindowEventSource;
 import game.windows.manager.WindowManager;
@@ -18,12 +19,15 @@ public class Main {
         logger.info("오목과 지뢰찾기 게임을 시작합니다.");
         resolveBackgroundColorNotShowingProblem();
 
+        final Window gameStartWindow = WindowManager.buildWindow(WindowType.GAME_START);
+        final Window omokGameWindow = WindowManager.buildWindow(WindowType.OMOK_GAME);
+
         final Frame frame = FrameBuilder.builder()
                 .title("오목/지뢰찾기 게임")
                 .width(400)
                 .height(400)
-                .addWindow(WindowType.GAME_START, WindowManager.buildWindow(WindowType.GAME_START))
-                .addWindow(WindowType.OMOK_GAME, WindowManager.buildWindow(WindowType.OMOK_GAME))
+                .addWindow(WindowType.GAME_START, gameStartWindow)
+                .addWindow(WindowType.OMOK_GAME, omokGameWindow)
                 .build()
                 .startWith(WindowType.GAME_START);
 
