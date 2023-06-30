@@ -1,5 +1,7 @@
 package game.windows.manager;
 
+import game.logic.domain.OmokGame;
+import game.store.GameMemoryStore;
 import game.windows.components.Button;
 import game.windows.components.TextField;
 import game.windows.components.Window;
@@ -142,6 +144,9 @@ public class OmokInfoInputWindowManager implements WindowBuilder {
                         logger.info("사용자 1 이름 : {}", player1Name);
                         logger.info("사용자 2 이름 : {}", player2Name);
                         logger.info("바둑판 사이즈 : {}", omokSize);
+                        GameMemoryStore.store(
+                                OmokGame.init(Integer.parseInt(omokSize), player1Name, player2Name)
+                        );
                         WindowEventSource.windowChangedTo(WindowType.OMOK_ORDER);
                     }
                 }
