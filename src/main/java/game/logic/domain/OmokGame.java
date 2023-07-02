@@ -19,6 +19,24 @@ public class OmokGame {
         );
     }
 
+    public String getPlayer1Name() {
+        return player1.name;
+    }
+
+    public String getPlayer2Name() {
+        return player2.name;
+    }
+
+    public void setPlayer1First() {
+        this.player1.setFirst(true);
+        this.player2.setFirst(false);
+    }
+
+    public void setPlayer2First() {
+        this.player1.setFirst(false);
+        this.player2.setFirst(true);
+    }
+
     public String getInfo() {
         return "[바둑판 사이즈=" + omokSize + ", player1=" + player1.name + ", player2=" + player2.name + "]";
     }

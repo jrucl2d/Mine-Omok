@@ -49,7 +49,9 @@ public class LabelBuilder {
     public Label build() {
         final JLabel label = new JLabel();
         label.setBounds(x, y, width, height);
-        label.setIcon(new ImageIcon(image.getPath()));
+        if (image != null) {
+            label.setIcon(new ImageIcon(image.getPath()));
+        }
         label.setVisible(visible);
         return new Label(label);
     }

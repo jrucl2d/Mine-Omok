@@ -1,5 +1,7 @@
 package game.windows.components;
 
+import game.common.Images;
+
 import javax.swing.*;
 
 public class Label extends Component {
@@ -15,6 +17,10 @@ public class Label extends Component {
 
     public void hide() {
         this.content.setVisible(false);
+    }
+
+    public void setImage(final Images image) {
+        content.setIcon(new ImageIcon(image.getPath()));
     }
 
     @Override

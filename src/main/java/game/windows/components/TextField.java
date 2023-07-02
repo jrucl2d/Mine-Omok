@@ -13,6 +13,14 @@ public class TextField extends Component {
         return textField.getText();
     }
 
+    public void setText(final String text) {
+        textField.setText(text);
+    }
+
+    public void show() {
+        textField.setVisible(true);
+    }
+
     @Override
     java.awt.Component getComponent() {
         return textField;

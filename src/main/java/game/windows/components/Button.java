@@ -9,6 +9,10 @@ public class Button extends Component {
         this.content = button;
     }
 
+    public void show() {
+        this.content.setVisible(true);
+    }
+
     @Override
     java.awt.Component getComponent() {
         return this.content;
